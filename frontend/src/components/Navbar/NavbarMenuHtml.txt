@@ -1,0 +1,41 @@
+<!-- Previous full HTML/CSS-based Navbar code for reference -->
+<div className="navbar">
+  <img src={assets.logo} alt="" className="logo" />
+  <ul className="navbar-menu">
+    {navbarMenu.map((item) => (
+      <li
+        key={item.value}
+        className={menu === item.value ? "active" : ""}
+        onClick={() => setMenu(item.value)}
+        style={{ cursor: "pointer" }}
+      >
+        {item.label}
+      </li>
+    ))}
+  </ul>
+  <div className="navbar-right">
+    <img src={assets.search_icon} alt="" />
+    <div className="navbar-search-icon">
+      <img src={assets.basket_icon} alt="" />
+      <div className="dot"></div>
+    </div>
+    <button
+      style={{
+        backgroundColor: "transparent",
+        padding: "10px 30px",
+        border: "1px solid tomato",
+        color: "#49557e",
+        fontSize: "16px",
+        cursor: "pointer",
+        borderRadius: "50px",
+        transition: "background-color 0.3s",
+      }}
+      onMouseOver={e => e.target.style.backgroundColor = '#fff4f2'}
+      onMouseOut={e => e.target.style.backgroundColor = 'transparent'}
+    >
+      Sign in
+    </button>
+  </div>
+</div>
+
+
