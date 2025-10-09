@@ -104,7 +104,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
         >
           <Typography
             component="p"
-            sx={{ fontFamily: "inherit", fontSize: "20px", fontWeight: 500 }}
+            sx={{ fontFamily: "inherit", fontSize: "clamp(12px,2vw, 17px)", fontWeight: 500 }}
           >
             {name}
           </Typography>
