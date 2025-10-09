@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/foods_list");
+        const response = await fetch("https://fooddel-app.onrender.com/foods_list");
         const data = await response.json();
         setFoodList(data);
       } catch (error) {
@@ -78,7 +78,7 @@ const StoreContextProvider = (props) => {
   // Authentication functions
   const registerUser = async (userData) => {
     try {
-      const response = await fetch("http://localhost:3001/users", {
+      const response = await fetch("https://fooddel-app.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +101,7 @@ const StoreContextProvider = (props) => {
 
   const loginUser = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:3001/users");
+      const response = await fetch("https://fooddel-app.onrender.com/users");
       const users = await response.json();
 
       const user = users.find(
